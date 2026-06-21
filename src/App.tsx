@@ -1,5 +1,5 @@
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
-import Home from "./Home";
+import BirdSearch from "./BirdSearch";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -8,8 +8,8 @@ export default function App() {
     <HashRouter>
       <div>
         <Routes>
-          <Route path="/" element={<Navigate to="Home" />} />
-          <Route path="/Home/*" element={<Home />} />
+          <Route path="/" element={<Navigate to="BirdSearch" />} />
+          <Route path="/BirdSearch/*" element={<BirdSearch />} />
         </Routes>
       </div>
     </HashRouter>
