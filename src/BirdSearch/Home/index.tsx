@@ -1,17 +1,15 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import InputGroup from "react-bootstrap/InputGroup";
 import Container from "react-bootstrap/Container";
 import { FaSearch } from "react-icons/fa";
-import * as client from "../client";
 
 export default function Home() {
   var search = "";
-  //const navigate = useNavigate();
+  const navigate = useNavigate()
   const bird_lookup = async () => {
-    const bird = await client.get_bird(search)
-    console.log(bird);
+    navigate(`/BirdSearch/Birds/${search}`);
   };
   return (
     <Container fluid>
